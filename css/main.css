@@ -1,0 +1,124 @@
+.outer {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.outer h2 {
+	margin: 0;
+}
+
+.filter-table {
+	margin: 20px 0;
+}
+
+.filter-table input,
+.filter-table select {
+	border: 0;
+	border-bottom: 1px solid #999;
+	min-width: 200px;
+	margin-right: 15px;
+	color: #646464;
+	padding: 8px 5px;
+}
+
+table {
+	box-shadow: 0 0 7px 2px #ccc;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+}
+
+table th,
+table td {
+	padding: 15px 12px;
+}
+
+table th {
+	text-align: left;
+}
+
+table td {
+	border-top: 1px solid #ccc;
+}
+
+.heart {
+	position: relative;
+}
+
+.heart .icon {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.heart .icon:before {
+	content: '\2661';
+	font-size: 36px;
+	vertical-align: middle;
+	line-height: 0;
+	color: #6d32b7;
+}
+
+.heart input[type="checkbox"] {
+	opacity: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.heart input[type="checkbox"]:checked~.icon:before {
+	content: '\2764';
+	font-size: 25px;
+}
+
+.pagination * {
+	margin: 0 5px;
+	display: inline-block;
+	color: #646464;
+	font-size: 14px;
+}
+
+.pagination {
+	padding: 20px 0 10px;
+	text-align: right;
+}
+
+.pagination select {
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	min-width: 50px;
+	color: #646464;
+	padding: 8px 5px;
+}
+
+.pagination span a {
+	padding: 0 5px;
+	font-size: 21px;
+	text-decoration: none;
+	position: relative;
+}
+
+.disabled {
+	cursor: default;
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.first-page:before {
+	content: '|';
+	font-size: 14px;
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+
+.last-page:after {
+	content: '|';
+	font-size: 14px;
+	position: absolute;
+	top: 2px;
+	right: 0;
+}
