@@ -4,13 +4,15 @@
 <head>
     <title>Catalyst Assignment</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
     <div class="outer">
         <h2>Indian Cricket Team Applicants</h2>
         <div class="filter-table">
-            <input type="text" value="" placeholder="Search">
+            <input id="searchBox" onkeyup="searchApplicant()" type="text" value="" placeholder="Search">
             <select>
                 <option>Select Age</option>
                 <option>20</option>
@@ -32,8 +34,8 @@
                     <th scope="col">Gender</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="applicantsTable">
+                <!-- <tr>
                     <td>
                         <div class="heart">
                             <input type="checkbox" value=""><span class="icon"></span></div>
@@ -56,7 +58,7 @@
                     </td>
                     <td>Lary</td>
                     <td>Male</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <div class="pagination">
