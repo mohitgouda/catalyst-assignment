@@ -7,14 +7,12 @@
     });
   }
 
-  //function secondCall(data) {
   function secondCall() {
     return $.ajax({
       url: "http://www.json-generator.com/api/json/get/cegcvaSlea?indent=0",
       type: 'GET',
       dataType: 'jsonp',
       timeout: 3000,
-      //firstCallData:data,
     });
   }
 
@@ -33,19 +31,18 @@
   function processData(data) {
     debugger;
     $("#applicantsTable").empty();
+    var uniqueAges = [];
     for (i = 0; i < data.length; i++) {
       $("#applicantsTable").append('<tr><td><div class="heart"><input type="checkbox" value=""><span class="icon"></span></div></td><td>'+ data[i].firstName + ' ' + data[i].lastName +'</td><td>'+ data[i].gender +'</td></tr>');
+      if(uniqueAges.indexOf(data[i].age) === -1){
+        uniqueAges.push(data[i].age);        
+      } 
     }
+    uniqueAges.sort();
+    $("#ageSelector").empty();
+    $("#ageSelector").append('<option value="" selected>Select Age</option>');
+    for (j = 0; j < uniqueAges.length; j++) {
+      $("#ageSelector").append('<option value="'+uniqueAges[j]+'">'+uniqueAges[j]+'</option>');
+    }
+    console.log(uniqueAges);
   }
-
-/*  $(document).ready(function() {
-    firstCall().done(function(data) {
-        secondCall(data).done(function(response) {
-            processData(this.firstCallData.concat(response));
-          }).fail(function() {
-            console.log("Second API call failed");
-          });
-      }).fail(function() {
-        console.log("First API call failed");
-      });
-  });*/
