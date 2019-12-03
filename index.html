@@ -13,12 +13,8 @@
         <h2>Indian Cricket Team Applicants</h2>
         <div class="filter-table">
             <input id="searchBox" onkeyup="searchApplicant()" type="text" value="" placeholder="Search">
-            <select>
-                <option>Select Age</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
+            <select id="ageSelector">
+                <option value="" selected>Select Age</option>
             </select>
             <input type="text" value="" placeholder="Page size">
         </div>
@@ -35,30 +31,11 @@
                 </tr>
             </thead>
             <tbody id="applicantsTable">
-                <!-- <tr>
-                    <td>
-                        <div class="heart">
-                            <input type="checkbox" value=""><span class="icon"></span></div>
-                    </td>
-                    <td>Otto</td>
-                    <td>Male</td>
-                </tr>
                 <tr>
-                    <td>
-                        <div class="heart">
-                            <input type="checkbox" value=""><span class="icon"></span></div>
-                    </td>
-                    <td>Thornton</td>
-                    <td>Male</td>
+                    <td>Loading ...</td>
+                    <td></td>
+                    <td></td>
                 </tr>
-                <tr>
-                    <td>
-                        <div class="heart">
-                            <input type="checkbox" value=""><span class="icon"></span></div>
-                    </td>
-                    <td>Lary</td>
-                    <td>Male</td>
-                </tr> -->
             </tbody>
         </table>
         <div class="pagination">
